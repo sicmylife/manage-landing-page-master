@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/*# sourceMappingURL=media.css.map */
