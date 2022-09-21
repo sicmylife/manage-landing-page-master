@@ -33,6 +33,10 @@ a {
   display: none;
 }
 
+.close {
+  display: none;
+}
+
 ul {
   list-style: none;
 }
@@ -101,24 +105,24 @@ section .container .even-columns {
           justify-content: space-between;
 }
 
-section .container .even-columns .main-text {
+section .container .even-columns .main-text2 {
   max-width: 600px;
 }
 
-section .container .even-columns .main-text h1 {
+section .container .even-columns .main-text2 h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
   color: var(--DarkBlue);
   padding-top: 2rem;
 }
 
-section .container .even-columns .main-text h2 {
+section .container .even-columns .main-text2 h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
   color: var(--DarkBlue);
 }
 
-section .container .even-columns .main-text p {
+section .container .even-columns .main-text2 p {
   font-size: 1.1rem;
   color: var(--DarkGrayishBlue);
   max-width: 400px;
@@ -126,7 +130,7 @@ section .container .even-columns .main-text p {
   line-height: 1.8rem;
 }
 
-section .container .even-columns .main-text h2 {
+section .container .even-columns .main-text2 h2 {
   margin-top: 0;
   font-size: 3rem;
   color: var(--DarkBlue);
@@ -142,18 +146,25 @@ section .container .even-columns .image {
 }
 
 section .container .even-columns .section2-list {
-  width: 550px;
+  width: 450px;
 }
 
 section .container .even-columns .section2-list ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
   padding-bottom: 1rem;
 }
 
-section .container .even-columns .section2-list ul li span {
+section .container .even-columns .section2-list ul li .flex-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding-bottom: 1rem;
+}
+
+section .container .even-columns .section2-list ul li .flex-number span {
   background-color: var(--BrightRed);
   padding: 8px 23px;
   border-radius: 50px;
@@ -161,16 +172,16 @@ section .container .even-columns .section2-list ul li span {
   font-weight: 600;
 }
 
-section .container .even-columns .section2-list ul li h3 {
+section .container .even-columns .section2-list ul li .flex-number h3 {
   font-size: 1rem;
   color: var(--DarkBlue);
-  padding-bottom: 1rem;
 }
 
 section .container .even-columns .section2-list ul li p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--DarkGrayishBlue);
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  line-height: 1.5rem;
 }
 
 .carousel {
@@ -224,8 +235,9 @@ section .container .even-columns .section2-list ul li p {
 .bg-black .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: 300px 400px 300px;
+      grid-template-columns: 300px 400px 300px;
+  gap: 100px;
 }
 
 .bg-black .container .column1 .logo-container {
@@ -241,6 +253,14 @@ section .container .even-columns .section2-list ul li p {
   margin-right: 1rem;
 }
 
+.bg-black .container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .bg-black .container .column2 ul li {
   padding-bottom: 1rem;
 }
@@ -249,12 +269,24 @@ section .container .even-columns .section2-list ul li p {
   color: var(--VaryLightGray);
 }
 
+.bg-black .container .column2 :hover {
+  color: var(--BrightRed);
+}
+
 .bg-black .container .column3 ul li {
   padding-bottom: 1rem;
 }
 
 .bg-black .container .column3 ul li a {
   color: var(--VaryLightGray);
+}
+
+.bg-black .container .column3 :hover {
+  color: var(--BrightRed);
+}
+
+.bg-black .container .column4 {
+  position: relative;
 }
 
 .bg-black .container .column4 form input {
@@ -278,6 +310,15 @@ section .container .even-columns .section2-list ul li p {
 
 .bg-black .container .column4 ::placeholder {
   color: #9f9e9e;
+}
+
+.bg-black .container .column4 .error {
+  position: absolute;
+  display: none;
+  color: red;
+  font-size: 10px;
+  top: 70px;
+  left: 20px;
 }
 
 .bg-black .container .column4 p {
@@ -338,7 +379,7 @@ section .container .even-columns .section2-list ul li p {
 .image-content {
   position: relative;
   row-gap: 5px;
-  padding: 25px 0;
+  padding: 10px 0;
 }
 
 .overlay {
@@ -347,7 +388,6 @@ section .container .even-columns .section2-list ul li p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--BrightRed);
   border-radius: 25px 25px 0 25px;
 }
 
@@ -359,7 +399,6 @@ section .container .even-columns .section2-list ul li p {
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: var(--BrightRed);
 }
 
 .overlay::after {
@@ -377,12 +416,11 @@ section .container .even-columns .section2-list ul li p {
 }
 
 .card-image .card-img {
-  height: 100%;
-  width: 100%;
+  height: 70%;
+  width: 70%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(--BrightRed);
 }
 
 .name {
@@ -460,8 +498,12 @@ section .container .even-columns .section2-list ul li p {
     font-size: 14px;
     background: url("./images/Vector.svg");
     background-repeat: no-repeat;
-    background-size: 650px;
-    background-position: 50px -100px;
+    background-size: 530px;
+    background-position: 80px -90px;
+    overflow-x: hidden;
+  }
+  body .primary-header {
+    padding-bottom: 2rem;
   }
   .container {
     max-width: 350px;
@@ -479,8 +521,57 @@ section .container .even-columns .section2-list ul li p {
   .hamburger .hambur {
     width: 30px;
   }
-  .primary-navigation {
+  .close {
     display: none;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  #msg {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+  }
+  .valid {
+    color: lime;
+  }
+  .invalid {
+    color: red;
+  }
+  .primary-navigation {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: white;
+    padding: 2rem 8rem;
+    -webkit-box-shadow: -7px 7px 24px -16px #42445a;
+            box-shadow: -7px 7px 24px -16px #42445a;
+  }
+  .primary-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .primary-navigation ul li {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+  }
+  .primary-navigation ul li a {
+    color: var(--DarkBlue);
   }
   .button-main {
     display: none;
@@ -499,7 +590,7 @@ section .container .even-columns .section2-list ul li p {
     text-align: center;
   }
   section .container .even-columns .main-text h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--DarkBlue);
     padding-top: 0;
@@ -507,44 +598,19 @@ section .container .even-columns .section2-list ul li p {
   section .container .even-columns .main-text p {
     font-size: 1.1rem;
     color: var(--DarkGrayishBlue);
-    max-width: 400px;
-    margin-bottom: 2rem;
+    margin-bottom: 0.6rem;
     line-height: 1.8rem;
   }
   section .container .even-columns .image {
     background: url("./images/illustration-intro.svg");
     background-repeat: no-repeat;
     background-size: 400px;
-    background-position: -20px 0px;
-    height: 450px;
-    width: 400px;
+    background-position: -20px 20px;
+    height: 380px;
+    width: 380px;
   }
-  section .container .even-columns .section2-list {
-    width: 550px;
-  }
-  section .container .even-columns .section2-list ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-    padding-bottom: 1rem;
-  }
-  section .container .even-columns .section2-list ul li span {
-    background-color: var(--BrightRed);
-    padding: 8px 23px;
-    border-radius: 50px;
-    color: var(--VaryLightGray);
-    font-weight: 600;
-  }
-  section .container .even-columns .section2-list ul li h3 {
-    font-size: 1rem;
-    color: var(--DarkBlue);
-    padding-bottom: 1rem;
-  }
-  section .container .even-columns .section2-list ul li p {
-    font-size: 1.1rem;
-    color: var(--DarkGrayishBlue);
-    padding-bottom: 1rem;
+  section {
+    padding-top: 5rem;
   }
   section .container .even-columns2 {
     -webkit-box-orient: vertical;
@@ -552,13 +618,154 @@ section .container .even-columns .section2-list ul li p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  section .container .even-columns2 .main-text h2 {
+  section .container .even-columns2 .main-text2 {
+    max-width: 400px;
+    text-align: center;
+  }
+  section .container .even-columns2 .main-text2 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--DarkBlue);
   }
-  section .container .even-columns2 .main-text p {
-    font-family: .7rem;
+  section .container .even-columns2 .main-text2 p {
+    font-size: 1rem;
+    color: var(--DarkGrayishBlue);
+    margin-bottom: 0.6rem;
+    line-height: 1.8rem;
+  }
+  section .container .even-columns2 .section2-list {
+    padding-top: 2rem;
+    max-width: 350px;
+  }
+  section .container .even-columns2 .section2-list ul li {
+    display: block;
+  }
+  section .container .even-columns2 .section2-list ul li .flex-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0px;
+    padding-bottom: 1rem;
+  }
+  section .container .even-columns2 .section2-list ul li .flex-number h3 {
+    width: 100%;
+    padding-bottom: 0;
+    background-color: var(--VeryPaleRed);
+    padding: 0.6rem 0.5rem;
+  }
+  .bg-orange {
+    padding: 5rem 0;
+  }
+  .bg-orange .container {
+    display: block;
+    text-align: center;
+  }
+  .bg-orange h2 {
+    font-size: 2.5rem;
+    max-width: 350px;
+  }
+  .bg-black {
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+  }
+  .bg-black .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .bg-black .container .column1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+  }
+  .bg-black .container .column1 .logo-container {
+    padding-bottom: 2rem;
+  }
+  .bg-black .container .column1 .logo-container img {
+    width: 120px;
+  }
+  .bg-black .container .column1 .list ul li {
+    display: inline-block;
+    padding-top: 2rem;
+  }
+  .bg-black .container .column1 .list li:not(:last-child) {
+    margin-right: 2rem;
+  }
+  .bg-black .container .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .bg-black .container .column2 ul li {
+    padding-bottom: 1rem;
+  }
+  .bg-black .container .column2 ul li a {
+    color: var(--VaryLightGray);
+  }
+  .bg-black .container .column3 ul li {
+    padding-bottom: 1rem;
+  }
+  .bg-black .container .column3 ul li a {
+    color: var(--VaryLightGray);
+  }
+  .bg-black .container .column4 form input {
+    border-radius: 50px;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
+  .bg-black .container .column4 ::-webkit-input-placeholder {
+    color: #9f9e9e;
+  }
+  .bg-black .container .column4 :-ms-input-placeholder {
+    color: #9f9e9e;
+  }
+  .bg-black .container .column4 ::-ms-input-placeholder {
+    color: #9f9e9e;
+  }
+  .bg-black .container .column4 ::placeholder {
+    color: #9f9e9e;
+  }
+  .bg-black .container .column4 .error {
+    position: absolute;
+    display: none;
+    color: red;
+    font-size: 12px;
+    top: 70px;
+    left: 40px;
+  }
+  .bg-black .container .column4 p {
+    font-size: 0.7rem;
+    padding-top: 1rem;
+    color: var(--VaryLightGray);
+    position: absolute;
+    top: 580px;
+    left: 30px;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
 }
 /*# sourceMappingURL=style.css.map */
