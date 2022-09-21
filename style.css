@@ -41,7 +41,7 @@ ul {
   list-style: none;
 }
 
-.button {
+.btn {
   background-color: var(--BrightRed);
   border: none;
   color: var(--VaryLightGray);

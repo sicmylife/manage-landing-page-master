@@ -1,4 +1,3 @@
-const { breakpoints } = require("@mui/system");
 
 const hamburger = document.querySelector(".hamburger");
 const close1 = document.querySelector(".close");
@@ -11,7 +10,7 @@ const btn = document.querySelector(".btn");
 console.log(btn)
 
 const regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-breakpoints.addEventListener('click',function(e){
+btn.addEventListener('click',function(e){
 e.preventDefault();
 validation()
 })
