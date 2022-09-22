@@ -327,6 +327,7 @@ section .container .even-columns {
 }
 
 .attribution {
+  padding: 20px 0;
   font-size: 11px;
   text-align: center;
 }
@@ -771,10 +772,8 @@ section .container .even-columns {
                   font-size: 0.7rem;
                   padding-top: 1rem;
                   color: var(--VaryLightGray);
-                  position: absolute;
-                  top: 580px;
-                  left: 30px;
-                  transform: translateX(20%);
+                
+                  // transform: translateX(10%);
 
                 }
               }

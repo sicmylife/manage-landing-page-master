@@ -347,6 +347,7 @@ section .container .even-columns .section2-list ul li p {
 }
 
 .attribution {
+  padding: 20px 0;
   font-size: 11px;
   text-align: center;
 }
@@ -783,11 +784,6 @@ section .container .even-columns .section2-list ul li p {
     font-size: 0.7rem;
     padding-top: 1rem;
     color: var(--VaryLightGray);
-    position: absolute;
-    top: 580px;
-    left: 30px;
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
   }
 }
 /*# sourceMappingURL=style.css.map */
