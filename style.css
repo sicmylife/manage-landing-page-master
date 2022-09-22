@@ -97,6 +97,14 @@ ul {
   font-weight: 500;
 }
 
+.primary-header .container .primary-navigation ul a:focus {
+  color: var(--BrightRed);
+}
+
+.primary-header .container .primary-navigation ul a:hover {
+  color: var(--BrightRed);
+}
+
 section .container .even-columns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,6 +595,12 @@ section .container .even-columns .section2-list ul li p {
   .primary-header .container .primary-navigation ul li a {
     margin-left: 0;
     color: var(--DarkBlue);
+  }
+  .primary-header .container .primary-navigation ul a:focus {
+    color: var(--BrightRed);
+  }
+  .primary-header .container .primary-navigation ul a:hover {
+    color: var(--BrightRed);
   }
   .button-main {
     display: none;

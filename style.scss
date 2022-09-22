@@ -86,6 +86,14 @@ ul {
           font-size: 1em;
           font-weight: 500;
         }
+
+        a:focus{
+          color: var(--BrightRed);
+        }
+
+        a:hover{
+          color: var(--BrightRed);
+        }
       }
     }
   }
@@ -555,6 +563,14 @@ section .container .even-columns {
           margin-left: 0;
           color: var(--DarkBlue);
         }
+      }
+
+      a:focus{
+        color: var(--BrightRed);
+      }
+
+      a:hover{
+        color: var(--BrightRed);
       }
     }
   }
