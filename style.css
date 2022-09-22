@@ -313,6 +313,25 @@ section .container .even-columns .section2-list ul li p {
   color: #9f9e9e;
 }
 
+.bg-black .container .column4 #msg {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+.bg-black .container .column4 #form .inputBox {
+  position: relative;
+}
+
+.bg-black .container .column4 .valid {
+  color: lime;
+}
+
+.bg-black .container .column4 .invalid {
+  color: red;
+}
+
 .bg-black .container .column4 p {
   font-size: 0.7rem;
   padding-top: 3rem;

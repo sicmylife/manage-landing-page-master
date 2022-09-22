@@ -285,14 +285,28 @@ section .container .even-columns {
         color: rgb(159, 158, 158);
       }
 
-      // .error{
-      //   position: absolute;
-      //   display: none;
-      //   color: red;
-      //   font-size: 10px;
-      //   top: 70px;
-      //   left: 20px;
-      // }
+      #msg{
+        display: block;
+        position:absolute;
+        top: 60px;
+        left: 10px;
+        
+      }
+    
+      #form .inputBox{
+        position: relative;
+      }
+    
+      .valid{
+        color: lime;
+    
+      }
+    
+      .invalid{
+        color: red;
+    
+      }
+    
 
 
       p {
