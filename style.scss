@@ -50,6 +50,8 @@ ul {
   -webkit-box-shadow: 1px 19px 29px -13px rgba(243, 85, 6, 1);
   -moz-box-shadow: 1px 19px 29px -13px rgba(243, 85, 6, 1);
   box-shadow: 1px 19px 29px -13px rgba(243, 85, 6, 1);
+  cursor: pointer;
+
 }
 
 .button:hover {
@@ -283,14 +285,14 @@ section .container .even-columns {
         color: rgb(159, 158, 158);
       }
 
-      .error{
-        position: absolute;
-        display: none;
-        color: red;
-        font-size: 10px;
-        top: 70px;
-        left: 20px;
-      }
+      // .error{
+      //   position: absolute;
+      //   display: none;
+      //   color: red;
+      //   font-size: 10px;
+      //   top: 70px;
+      //   left: 20px;
+      // }
 
 
       p {
@@ -495,9 +497,13 @@ section .container .even-columns {
   #msg{
     display: block;
     position:absolute;
-    top: 70px;
+    top: 60px;
     left: 50px;
     
+  }
+
+  #form .inputBox{
+    position: relative;
   }
 
   .valid{
@@ -510,10 +516,10 @@ section .container .even-columns {
 
   }
 
-  .primary-navigation {
+  .primary-header .container .primary-navigation {
     position: absolute;
     top: 100px;
-    left: 50px;
+    left: 25px;
     background-color: white;
     padding: 2rem 8rem;
     box-shadow: -7px 7px 24px -16px rgba(66, 68, 90, 1);
@@ -529,9 +535,10 @@ section .container .even-columns {
       li {
         font-size: 1em;
         font-weight: 700;
-        margin: 0;
-
+        margin-left: 0;
+        
         a {
+          margin-left: 0;
           color: var(--DarkBlue);
         }
       }
@@ -712,7 +719,10 @@ section .container .even-columns {
               }
           
               .column4 {
-                form input {
+                form{
+                  
+                  input {
+                    width: 60%;
                   border-radius: 50px;
                   border: none;
                   padding: 0.8rem 1.6rem;
@@ -723,14 +733,10 @@ section .container .even-columns {
                   color: rgb(159, 158, 158);
                 }
 
-                .error{
-                  position: absolute;
-                  display: none;
-                  color: red;
-                  font-size: 12px;
-                  top: 70px;
-                  left: 40px;
-                }
+            
+              }
+
+          
                 p {
                   font-size: 0.7rem;
                   padding-top: 1rem;

@@ -1,44 +1,33 @@
-
 const hamburger = document.querySelector(".hamburger");
 const close1 = document.querySelector(".close");
 const nav = document.querySelector(".primary-navigation");
-const msg = document.querySelector("#msg");
-const email = document.querySelector("#email").value;
-const form = document.querySelector("#form");
-
+const msg = document.getElementById("msg");
+const email = document.querySelector("#email");
+const form = document.querySelector("form");
 const btn = document.querySelector(".btn");
-console.log(btn)
+const inputBox = document.querySelector(".inputBox");
+console.log(email.value);
 
-const regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-btn.addEventListener('click',function(e){
-e.preventDefault();
-validation()
-})
-
-
-const validation = () => {
-  if (email.match(regex)) {
-    form.classList.add("valid");
-    form.classList.remove("invalid");
-    msg.innerHTML = 'Thank you';
+// Email validation
+function validation() {
+  const regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!email.value.match(regex)) {
+    inputBox.classList.add("invalid");
+    msg.innerHTML = "Please enter a valid email address";
+    console.log("no sirve");
+  } else {
+    inputBox.classList.remove("invalid");
+    inputBox.classList.add("valid");
+    msg.innerHTML = "Thank you";
+    console.log(" sive");
   }
-   
- 
+}
 
-  else {
-    form.classList.add("invalid");
-    form.classList.remove("valid");
-    msg.innerHTML = 'Enter correct email';
-  }
-
-   
-  if (email === "") {
-    form.classList.add("valid");
-    form.classList.remove("invalid");
-    msg.innerHTML = '';}
-};
-
-
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  // console.log(form);
+  validation();
+});
 
 hamburger.onclick = function () {
   hamburger.classList.add("hide");
